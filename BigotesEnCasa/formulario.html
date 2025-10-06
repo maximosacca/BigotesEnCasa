@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Adopción - BigotesEnCasa</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+    <!-- Header y navegación -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span>🐱</span>
+                <h1>BigotesEnCasa</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#catalogo">Gatos en Adopción</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Formulario de adopción -->
+    <div class="container">
+        <div class="formulario-adopcion">
+            <h2>Formulario de Adopción</h2>
+            <form id="adopcionForm">
+                <!-- Información personal -->
+                <h3>Información Personal</h3>
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" name="ciudad" required>
+                </div>
+                
+                <!-- Información sobre el hogar -->
+                <h3>Información sobre tu Hogar</h3>
+                
+                <div class="form-group">
+                    <label for="tipo-vivienda">Tipo de vivienda:</label>
+                    <select id="tipo-vivienda" name="tipo-vivienda" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="casa">Casa</option>
+                        <option value="departamento">Departamento</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="piso">¿En qué piso vives?</label>
+                    <input type="number" id="piso" name="piso" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label>¿Tienes red de protección en balcón/ventanas?</label>
+                    <div class="checkbox-group">
+                        <input type="radio" id="red-si" name="red-proteccion" value="si">
+                        <label for="red-si">Sí</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" id="red-no" name="red-proteccion" value="no">
+                        <label for="red-no">No</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" id="red-instalar" name="red-proteccion" value="instalar">
+                        <label for="red-instalar">Estoy dispuesto a instalar</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>¿Tienes otros animales en casa?</label>
+                    <div class="checkbox-group">
+                        <input type="radio" id="animales-si" name="otros-animales" value="si">
+                        <label for="animales-si">Sí</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" id="animales-no" name="otros-animales" value="no">
+                        <label for="animales-no">No</label>
+                    </div>
+                </div>
+                
+                <div class="form-group" id="animales-detalle" style="display: none;">
+                    <label>Por favor, describe qué animales tienes:</label>
+                    <textarea id="animales-descripcion" name="animales-descripcion"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>¿Todas las personas que viven contigo están de acuerdo con la adopción?</label>
+                    <div class="checkbox-group">
+                        <input type="radio" id="acuerdo-si" name="acuerdo-familiar" value="si" required>
+                        <label for="acuerdo-si">Sí</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" id="acuerdo-no" name="acuerdo-familiar" value="no" required>
+                        <label for="acuerdo-no">No</label>
+                    </div>
+                </div>
+                
+                <!-- Información adicional -->
+                <h3>Información Adicional</h3>
+                
+                <div class="form-group">
+                    <label for="experiencia">¿Tienes experiencia previa con gatos?</label>
+                    <textarea id="experiencia" name="experiencia" placeholder="Cuéntanos sobre tu experiencia con mascotas..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="motivo">¿Por qué quieres adoptar un gato?</label>
+                    <textarea id="motivo" name="motivo" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gato-interes">¿Hay algún gato en particular que te interese?</label>
+                    <input type="text" id="gato-interes" name="gato-interes">
+                </div>
+                
+                <button type="submit" class="btn-enviar">Enviar Solicitud</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>BigotesEnCasa - Rescatando y encontrando hogares para gatos desde 2020</p>
+            <p>Email: contacto@bigotesencasa.org</p>
+            <p>&copy; 2023 BigotesEnCasa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/formulario.js"></script>
+</body>
+</html>
